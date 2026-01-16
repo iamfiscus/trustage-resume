@@ -1,26 +1,290 @@
 @import "tailwindcss";
 
+/* ================================================
+   JD FOR JEFF - DESIGN SYSTEM
+   Typography + Color + Animation Tokens
+   ================================================ */
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* ======================
+     FONTS
+     ====================== */
+  --font-headline: var(--font-serif), Georgia, "Times New Roman", serif;
+  --font-body: var(--font-sans), -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-data: var(--font-mono), "SF Mono", Consolas, monospace;
+
+  /* ======================
+     TYPOGRAPHY SCALE (Fluid)
+     ====================== */
+  --text-micro: clamp(10px, 1.5vw, 11px);
+  --text-caption: clamp(12px, 2vw, 14px);
+  --text-body: clamp(16px, 2.5vw, 18px);
+  --text-lead: clamp(18px, 3vw, 22px);
+  --text-h3: clamp(20px, 3.5vw, 24px);
+  --text-h2: clamp(24px, 4vw, 32px);
+  --text-h1: clamp(32px, 5vw, 48px);
+  --text-display: clamp(40px, 7vw, 64px);
+  --text-data: clamp(48px, 10vw, 96px);
+
+  /* ======================
+     COLOR SYSTEM - THE EMOTIONAL ARC
+     ====================== */
+
+  /* Act 1: The Paper - Formal, Academic */
+  --bg-paper: #fafaf9;
+  --accent-paper: #1a1a1a;
+
+  /* Act 2: The Challenge - Tension, Problems */
+  --bg-challenge: #f5f5f4;
+  --accent-challenge: #dc2626;
+  --accent-challenge-muted: #fecaca;
+
+  /* Act 3: The Pillars - Clarity, Solutions */
+  --bg-pillars: #ffffff;
+  --accent-pillars: #2563eb;
+  --accent-pillars-muted: #dbeafe;
+
+  /* Act 4: The Horizon - Future, Innovation */
+  --bg-horizon: #faf5ff;
+  --accent-horizon: #7c3aed;
+  --accent-horizon-muted: #ede9fe;
+
+  /* Act 5: The Toolkit - Technical, Capable (white/sepia) */
+  --bg-toolkit: #faf8f5;
+  --accent-toolkit: #1a1a1a;
+  --text-toolkit: #44403c;
+
+  /* Act 6: The Close - Resolution */
+  --bg-close: #ffffff;
+  --accent-close: #2563eb;
+
+  /* ======================
+     NEUTRAL COLORS
+     ====================== */
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a5568;
+  --text-muted: #718096;
+  --border-light: #e5e5e5;
+
+  /* ======================
+     ANIMATION TIMING
+     ====================== */
+  --duration-fast: 150ms;
+  --duration-normal: 300ms;
+  --duration-slow: 600ms;
+  --duration-slower: 1000ms;
+  --ease-out: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  --ease-spring: cubic-bezier(0.34, 1.56, 0.64, 1);
 }
 
+/* ======================
+   TAILWIND THEME INLINE
+   ====================== */
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-background: var(--bg-paper);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-body);
+  --font-serif: var(--font-headline);
+  --font-mono: var(--font-data);
+
+  /* Custom colors for Tailwind */
+  --color-paper: var(--bg-paper);
+  --color-challenge: var(--bg-challenge);
+  --color-pillars: var(--bg-pillars);
+  --color-horizon: var(--bg-horizon);
+  --color-toolkit: var(--bg-toolkit);
+
+  --color-accent-challenge: var(--accent-challenge);
+  --color-accent-pillars: var(--accent-pillars);
+  --color-accent-horizon: var(--accent-horizon);
+  --color-accent-toolkit: var(--accent-toolkit);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ======================
+   BASE STYLES
+   ====================== */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-body);
+  font-size: var(--text-body);
+  line-height: 1.7;
+  color: var(--text-primary);
+  background: var(--bg-paper);
+}
+
+/* ======================
+   TYPOGRAPHY CLASSES
+   ====================== */
+.font-headline {
+  font-family: var(--font-headline);
+}
+
+.font-body {
+  font-family: var(--font-body);
+}
+
+.font-data {
+  font-family: var(--font-data);
+}
+
+.text-micro { font-size: var(--text-micro); }
+.text-caption { font-size: var(--text-caption); }
+.text-body { font-size: var(--text-body); }
+.text-lead { font-size: var(--text-lead); }
+.text-h3 { font-size: var(--text-h3); }
+.text-h2 { font-size: var(--text-h2); }
+.text-h1 { font-size: var(--text-h1); }
+.text-display { font-size: var(--text-display); }
+.text-data { font-size: var(--text-data); }
+
+/* ======================
+   SECTION BACKGROUNDS
+   ====================== */
+.bg-act-paper { background-color: var(--bg-paper); }
+.bg-act-challenge { background-color: var(--bg-challenge); }
+.bg-act-pillars { background-color: var(--bg-pillars); }
+.bg-act-horizon { background-color: var(--bg-horizon); }
+.bg-act-toolkit { background-color: var(--bg-toolkit); }
+.bg-act-close { background-color: var(--bg-close); }
+
+/* ======================
+   GRADIENT TRANSITIONS
+   ====================== */
+.gradient-paper-to-challenge {
+  background: linear-gradient(to bottom, var(--bg-paper), var(--bg-challenge));
+}
+
+.gradient-challenge-to-pillars {
+  background: linear-gradient(to bottom, var(--bg-challenge), var(--bg-pillars));
+}
+
+.gradient-pillars-to-horizon {
+  background: linear-gradient(to bottom, var(--bg-pillars), var(--bg-horizon));
+}
+
+.gradient-horizon-to-toolkit {
+  background: linear-gradient(to bottom, var(--bg-horizon), var(--bg-toolkit));
+}
+
+.gradient-toolkit-to-close {
+  background: linear-gradient(to bottom, var(--bg-toolkit), var(--bg-close));
+}
+
+/* ======================
+   ACCENT COLORS
+   ====================== */
+.accent-challenge { color: var(--accent-challenge); }
+.accent-pillars { color: var(--accent-pillars); }
+.accent-horizon { color: var(--accent-horizon); }
+.accent-toolkit { color: var(--accent-toolkit); }
+
+/* ======================
+   DATA CALLOUT STYLES
+   ====================== */
+.data-callout {
+  font-family: var(--font-data);
+  font-size: var(--text-data);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.data-label {
+  font-family: var(--font-body);
+  font-size: var(--text-caption);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+}
+
+/* ======================
+   SECTION MARKER
+   ====================== */
+.section-marker {
+  font-family: var(--font-data);
+  font-size: var(--text-micro);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+}
+
+/* ======================
+   PULL QUOTE
+   ====================== */
+.pull-quote {
+  font-family: var(--font-headline);
+  font-size: var(--text-h3);
+  font-style: italic;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+/* ======================
+   MARGIN NOTE
+   ====================== */
+.margin-note {
+  font-size: var(--text-caption);
+  color: var(--text-muted);
+  padding-left: 1rem;
+  border-left: 2px solid var(--border-light);
+}
+
+/* ======================
+   DIFF VIEW STYLES
+   ====================== */
+.diff-line {
+  font-family: var(--font-data);
+  font-size: var(--text-caption);
+  padding: 0.25rem 0.75rem;
+  border-radius: 2px;
+}
+
+.diff-remove {
+  background: #fef2f2;
+  color: #991b1b;
+}
+
+.diff-add {
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.diff-context {
+  color: var(--text-muted);
+}
+
+/* ======================
+   REDUCED MOTION
+   ====================== */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ======================
+   MOBILE ADJUSTMENTS
+   ====================== */
+@media (max-width: 640px) {
+  :root {
+    --text-data: clamp(36px, 12vw, 48px);
+    --text-h1: clamp(28px, 6vw, 36px);
+    --text-display: clamp(32px, 8vw, 48px);
+  }
+
+  .margin-note {
+    margin-top: 1rem;
+    padding: 0.75rem;
+    border-left: none;
+    border-radius: 4px;
+    background: rgba(0, 0, 0, 0.03);
+  }
 }
