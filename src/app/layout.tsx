@@ -22,6 +22,16 @@ const inter = Inter({
 export const metadata: Metadata = {
   title: "JD for Jeff | Accelerating TruStage's Technology Future",
   description: "A proposal for building Data & Technology as a Service at TruStage",
+  openGraph: {
+    title: "JD for Jeff",
+    description: "Accelerating TruStage's Technology Future - Data & Technology as a Service",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "JD for Jeff",
+    description: "Accelerating TruStage's Technology Future",
+  },
 };
 
 export default function RootLayout({

@@ -50,7 +50,7 @@ function GatherRequirements() {
         className="mb-10"
         style={{ opacity: useTransform(scrollYProgress, [0.05, 0.1], [0, 1]) }}
       >
-        <p className="text-xs text-gray-400 tracking-wide mb-4">strategic leadership</p>
+        <p className="text-xs text-gray-700 tracking-wide mb-4 italic">strategic leadership</p>
         <div className="grid grid-cols-2 gap-8 pb-2 border-b border-gray-200">
           <span className="text-xs text-gray-400">what the job says</span>
           <span className="text-xs text-gray-400">what it actually means</span>
@@ -78,7 +78,7 @@ function GatherRequirements() {
         className="mb-10"
         style={{ opacity: useTransform(scrollYProgress, [0.25, 0.3], [0, 1]) }}
       >
-        <p className="text-xs text-gray-400 tracking-wide mb-4">portfolio management</p>
+        <p className="text-xs text-gray-700 tracking-wide mb-4 italic">portfolio management</p>
         <div className="grid grid-cols-2 gap-8 pb-2 border-b border-gray-200">
           <span className="text-xs text-gray-400">what the job says</span>
           <span className="text-xs text-gray-400">what it actually means</span>
@@ -106,7 +106,7 @@ function GatherRequirements() {
         className="mb-10"
         style={{ opacity: useTransform(scrollYProgress, [0.45, 0.5], [0, 1]) }}
       >
-        <p className="text-xs text-gray-400 tracking-wide mb-4">stakeholder management</p>
+        <p className="text-xs text-gray-700 tracking-wide mb-4 italic">stakeholder management</p>
         <div className="grid grid-cols-2 gap-8 pb-2 border-b border-gray-200">
           <span className="text-xs text-gray-400">what the job says</span>
           <span className="text-xs text-gray-400">what it actually means</span>
