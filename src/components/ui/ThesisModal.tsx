@@ -8,10 +8,10 @@ interface ThesisModalProps {
   onClose: () => void;
 }
 
-const thesisContent = `# Personal Innovation Thesis: The Trust Moat in an AI-First Insurance Future
+const thesisContent = `# The Trust Moat in an AI-First Insurance Future
 
-**[Your Name]**
-*Director of Research & Development Candidate*
+**JD Fiscus**
+*Director of Research & Development*
 
 ---
 

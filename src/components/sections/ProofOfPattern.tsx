@@ -26,7 +26,19 @@ function ProofOfPatternContent() {
         style={{ opacity: useTransform(scrollYProgress, [0, 0.3], [0, 1]) }}
       >
         <p className="text-xs text-gray-400 tracking-wide mb-4">
-          <span className="text-gray-700 font-thin font-mono text-5xl font-stretch-50% tracking-tight">P</span><span className="text-gray-400 font-thin font-mono text-3xl font-stretch-150% tracking-wide italic">roven</span> <span className="text-gray-700 font-thin font-mono text-5xl font-stretch-50% tracking-tight">P</span><span className="text-gray-400 font-thin font-mono text-3xl font-stretch-150% tracking-wide italic">attern</span></p>
+          <span className="text-gray-700 font-thin font-mono text-5xl font-stretch-50% tracking-tight">
+            P
+          </span>
+          <span className="text-gray-400 font-thin font-mono text-3xl font-stretch-150% tracking-wide italic">
+            roven
+          </span>{" "}
+          <span className="text-gray-700 font-thin font-mono text-5xl font-stretch-50% tracking-tight">
+            P
+          </span>
+          <span className="text-gray-400 font-thin font-mono text-3xl font-stretch-150% tracking-wide italic">
+            attern
+          </span>
+        </p>
         <ShippedTerminal />
       </motion.div>
 
@@ -49,7 +61,10 @@ function ProofOfPatternContent() {
         </motion.button>
       </motion.div>
 
-      <ThesisModal isOpen={isThesisModalOpen} onClose={() => setIsThesisModalOpen(false)} />
+      <ThesisModal
+        isOpen={isThesisModalOpen}
+        onClose={() => setIsThesisModalOpen(false)}
+      />
 
       {/* Footer */}
       <motion.p
