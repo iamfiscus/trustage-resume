@@ -20,16 +20,16 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "JD for Jeff | Accelerating TruStage's Technology Future",
-  description: "A proposal for building Data & Technology as a Service at TruStage",
+  title: "JD's Innovation Thesis | Accelerating TruStage's Technology Future",
+  description: "A proposal for building R&D as a Service at TruStage",
   openGraph: {
-    title: "JD for Jeff",
-    description: "Accelerating TruStage's Technology Future - Data & Technology as a Service",
+    title: "JD's Innovation Thesis",
+    description: "A proposal for building R&D as a Service at TruStage",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "JD for Jeff",
+    title: "JD's Innovation Thesis",
     description: "Accelerating TruStage's Technology Future",
   },
 };

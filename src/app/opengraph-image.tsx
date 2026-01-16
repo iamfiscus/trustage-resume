@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "JD for Jeff - Accelerating TruStage's Technology Future";
+export const alt = "JD's Innovation Thesis - Accelerating TruStage's Technology Future";
 export const size = {
   width: 1200,
   height: 630,
