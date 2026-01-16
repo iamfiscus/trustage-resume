@@ -44,11 +44,18 @@
   --accent-pillars: #2563eb;
   --accent-pillars-muted: #dbeafe;
 
+  /* Cluster - Grouping */
+  --bg-cluster: #eff6ff;
+  --accent-cluster: #2563eb;
+  --accent-cluster-muted: #dbeafe;
+
   /* Act 4: The Horizon - Future, Innovation */
   --bg-horizon: #faf5ff;
   --accent-horizon: #7c3aed;
   --accent-horizon-muted: #ede9fe;
-
+  --bg-converge: #eff6ff;
+  --accent-converge: #2563eb;
+  --accent-converge-muted: #dbeafe;
   /* Act 5: The Toolkit - Technical, Capable (white/sepia) */
   --bg-toolkit: #faf8f5;
   --accent-toolkit: #1a1a1a;
@@ -146,7 +153,9 @@ body {
 .bg-act-paper { background-color: var(--bg-paper); }
 .bg-act-challenge { background-color: var(--bg-challenge); }
 .bg-act-pillars { background-color: var(--bg-pillars); }
+.bg-act-cluster { background-color: var(--bg-cluster); }
 .bg-act-horizon { background-color: var(--bg-horizon); }
+.bg-act-converge { background-color: var(--bg-converge); }
 .bg-act-toolkit { background-color: var(--bg-toolkit); }
 .bg-act-close { background-color: var(--bg-close); }
 
@@ -161,12 +170,28 @@ body {
   background: linear-gradient(to bottom, var(--bg-challenge), var(--bg-pillars));
 }
 
+.gradient-pillars-to-cluster {
+  background: linear-gradient(to bottom, var(--bg-pillars), var(--bg-cluster));
+}
+
+.gradient-cluster-to-converge {
+  background: linear-gradient(to bottom, var(--bg-cluster), var(--bg-converge));
+}
+
+.gradient-cluster-to-horizon {
+  background: linear-gradient(to bottom, var(--bg-cluster), var(--bg-horizon));
+}
+
 .gradient-pillars-to-horizon {
   background: linear-gradient(to bottom, var(--bg-pillars), var(--bg-horizon));
 }
 
 .gradient-horizon-to-toolkit {
   background: linear-gradient(to bottom, var(--bg-horizon), var(--bg-toolkit));
+}
+
+.gradient-toolkit-to-converge {
+  background: linear-gradient(to bottom, var(--bg-toolkit) 0%, var(--bg-converge) 60%, var(--bg-converge) 100%);
 }
 
 .gradient-toolkit-to-close {

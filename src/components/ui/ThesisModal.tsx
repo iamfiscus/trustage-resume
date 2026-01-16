@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, AnimatePresence } from "framer-motion";
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 interface ThesisModalProps {
   isOpen: boolean;
@@ -119,7 +119,7 @@ I want to help build that future.
 
 function parseMarkdown(content: string) {
   const lines = content.split('\n');
-  const elements: JSX.Element[] = [];
+  const elements: React.ReactElement[] = [];
   let currentList: string[] = [];
   let inList = false;
 
@@ -311,7 +311,7 @@ function parseMarkdown(content: string) {
 }
 
 export function ThesisModal({ isOpen, onClose }: ThesisModalProps) {
-  const [content, setContent] = useState<JSX.Element[]>([]);
+  const [content, setContent] = useState<React.ReactElement[]>([]);
 
   useEffect(() => {
     if (isOpen) {

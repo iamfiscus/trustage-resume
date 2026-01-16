@@ -157,9 +157,9 @@ function ConvergeContent() {
 export function Converge() {
   return (
     <>
-      <GradientTransition from="toolkit" to="horizon" />
+      <GradientTransition from="cluster" to="converge" />
 
-      <Section id="converge" background="horizon" className="px-6 py-20">
+      <Section id="converge" background="converge" className="px-6 py-20">
         <div className="max-w-2xl mx-auto">
           <ConvergeContent />
         </div>

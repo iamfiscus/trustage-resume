@@ -7,14 +7,16 @@ interface SectionProps {
   id: string;
   className?: string;
   children: ReactNode;
-  background?: "paper" | "challenge" | "pillars" | "horizon" | "toolkit" | "close";
+  background?: "paper" | "challenge" | "pillars" | "cluster" | "horizon" | "toolkit" | "converge" | "close";
 }
 
 const bgClasses = {
   paper: "bg-act-paper",
   challenge: "bg-act-challenge",
   pillars: "bg-act-pillars",
+  cluster: "bg-act-cluster",
   horizon: "bg-act-horizon",
+  converge: "bg-act-converge",
   toolkit: "bg-act-toolkit",
   close: "bg-act-close",
 };
@@ -31,8 +33,8 @@ export function Section({ id, className = "", children, background = "paper" }: 
 }
 
 interface GradientTransitionProps {
-  from: "paper" | "challenge" | "pillars" | "horizon" | "toolkit";
-  to: "challenge" | "pillars" | "horizon" | "toolkit" | "close";
+  from: "paper" | "challenge" | "pillars" | "cluster" | "horizon" | "toolkit";
+  to: "challenge" | "pillars" | "cluster" | "horizon" | "toolkit" | "converge" | "close";
 }
 
 export function GradientTransition({ from, to }: GradientTransitionProps) {

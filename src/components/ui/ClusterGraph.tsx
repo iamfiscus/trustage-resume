@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { useState, useRef, useCallback } from "react";
+import { useState, useRef, useCallback, useMemo } from "react";
 
 // Full cluster data with ideas
 const clusterData = [
@@ -128,6 +128,9 @@ function generateIdeaDots(cluster: typeof clusterData[0], clusterIndex: number) 
   const startY = 0;
   const startX = 50;
 
+  // Round to fixed precision to avoid hydration mismatches
+  const round = (n: number, decimals = 2) => Math.round(n * Math.pow(10, decimals)) / Math.pow(10, decimals);
+
   for (let i = 0; i < cluster.count; i++) {
     const spreadAngle = ((i - (cluster.count - 1) / 2) / cluster.count) * 0.8;
     const initialX = startX + spreadAngle * 20;
@@ -137,10 +140,10 @@ function generateIdeaDots(cluster: typeof clusterData[0], clusterIndex: number) 
 
     dots.push({
       id: `${clusterIndex}-${i}`,
-      startX: initialX,
+      startX: round(initialX),
       startY: startY,
-      endX: cluster.position.x + (seededRandom(seed) - 0.5) * 8,
-      endY: cluster.position.y + (seededRandom(seed + 0.5) - 0.5) * 6,
+      endX: round(cluster.position.x + (seededRandom(seed) - 0.5) * 8),
+      endY: round(cluster.position.y + (seededRandom(seed + 0.5) - 0.5) * 6),
       delay: i * 0.05 + clusterIndex * 0.1,
       color: cluster.color,
     });
@@ -157,9 +160,10 @@ export function ClusterGraph() {
     offset: ["start end", "end center"],
   });
 
-  // Generate all idea dots
-  const allDots = clusterData.flatMap((cluster, idx) =>
-    generateIdeaDots(cluster, idx)
+  // Generate all idea dots (memoized for consistent server/client rendering)
+  const allDots = useMemo(
+    () => clusterData.flatMap((cluster, idx) => generateIdeaDots(cluster, idx)),
+    []
   );
 
   const selected = clusterData.find(c => c.id === selectedCluster);

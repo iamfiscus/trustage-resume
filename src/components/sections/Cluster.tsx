@@ -80,9 +80,9 @@ function ClusterContent() {
 export function Cluster() {
   return (
     <>
-      <GradientTransition from="pillars" to="horizon" />
+      <GradientTransition from="pillars" to="cluster" />
 
-      <Section id="cluster" background="horizon" className="px-6 py-20">
+      <Section id="cluster" background="cluster" className="px-6 py-20">
         <div className="max-w-2xl mx-auto">
           <ClusterContent />
         </div>
