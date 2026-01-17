@@ -41,10 +41,19 @@ function DivergeContent() {
       >
         {/* Step label */}
         <motion.p
-          className="text-gray-400 text-xs tracking-wide mb-8"
+          className="text-gray-400 text-xs tracking-wide mb-4"
           style={{ opacity: useTransform(scrollYProgress, [0, 0.05], [0, 1]) }}
         >
           step 2: <span className="text-gray-700 font-thin font-mono text-5xl underline">Diverge</span>
+        </motion.p>
+
+        {/* Deadpan */}
+        <motion.p
+          className="text-center mb-8"
+          style={{ opacity: useTransform(scrollYProgress, [0, 0.05], [0, 1]) }}
+        >
+          <span className="text-gray-900 font-black text-xl md:text-2xl lowercase tracking-tight">no bad ideas.</span>
+          <span className="text-gray-400 font-light text-lg md:text-xl italic ml-2">yet.</span>
         </motion.p>
 
         {/* Prompt */}
@@ -90,7 +99,7 @@ function DivergeContent() {
             className="text-gray-400 text-xs mt-4"
             style={{ opacity: useTransform(scrollYProgress, [0.35, 0.4], [0, 1]) }}
           >
-            + 28 more ideas...
+            + 30 more ideas...
           </motion.p>
         </motion.div>
 
@@ -103,6 +112,9 @@ function DivergeContent() {
           <p className="text-gray-600">
             Suspend judgment during divergence. Criticism kills creativity.
           </p>
+          <p className="text-gray-500 text-sm mt-2">
+            Save the criticism for converge. That&apos;s what it&apos;s for.
+          </p>
         </motion.div>
 
         {/* Output with clickable modal */}
@@ -111,7 +123,7 @@ function DivergeContent() {
           style={{ opacity: useTransform(scrollYProgress, [0.65, 0.8], [0, 1]) }}
         >
           <p className="text-xs text-gray-400 tracking-wide mb-3">output</p>
-          <IdeasTrigger count={40} onClick={() => setModalOpen(true)} />
+          <IdeasTrigger count={42} onClick={() => setModalOpen(true)} />
           <p className="text-gray-500 mt-3">
             Now cluster by theme.
           </p>

@@ -50,6 +50,9 @@ const allIdeas = [
   { id: 38, text: "Regulatory compliance checkpoints", cluster: "Governance" },
   { id: 39, text: "Data privacy impact assessments", cluster: "Governance" },
   { id: 40, text: "Vendor/partner evaluation criteria", cluster: "Governance" },
+  // Meta ideas
+  { id: 41, text: "Convince everyone this was their idea all along", cluster: "Stakeholder" },
+  { id: 42, text: "Build something so useful they forget to ask for a status update", cluster: "Enablement" },
 ];
 
 const clusterColors: Record<string, string> = {
@@ -91,7 +94,7 @@ export function IdeasModal({ isOpen, onClose }: IdeasModalProps) {
             <div className="flex items-center justify-between px-6 py-4 border-b border-gray-200">
               <div>
                 <h2 className="text-lg font-medium text-gray-900">Diverge: Raw Ideas</h2>
-                <p className="text-sm text-gray-500">40 ideas generated without judgment</p>
+                <p className="text-sm text-gray-500">42 ideas generated without judgment</p>
               </div>
               <button
                 onClick={onClose}
@@ -138,7 +141,7 @@ export function IdeasModal({ isOpen, onClose }: IdeasModalProps) {
                 {/* Summary */}
                 <div className="mt-8 pt-6 border-t border-gray-200">
                   <p className="text-gray-500">
-                    <span className="text-gray-900">40 ideas</span> →
+                    <span className="text-gray-900">42 ideas</span> →
                     <span className="text-gray-900"> 6 clusters</span> →
                     <span className="text-gray-900"> 5 selections</span>
                   </p>

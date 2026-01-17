@@ -118,6 +118,18 @@ export function Act4Horizon() {
             subtitle="R&D isn&apos;t just about today&apos;s problems."
           />
 
+          {/* Deadpan */}
+          <motion.div
+            className="mb-12 flex items-baseline gap-2 md:gap-4"
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            viewport={{ once: true }}
+          >
+            <span className="text-gray-300 text-3xl md:text-5xl" style={{ fontFamily: 'var(--font-serif)' }}>Bet</span>
+            <span className="text-gray-900 font-black text-4xl md:text-6xl uppercase tracking-tight" style={{ fontFamily: 'var(--font-sans)' }}>early.</span>
+            <span className="text-gray-400 text-lg md:text-2xl italic ml-2" style={{ fontFamily: 'var(--font-mono)' }}>Adjust often.</span>
+          </motion.div>
+
           {/* Intro */}
           <motion.div
             className="space-y-4 mb-12"
@@ -127,7 +139,10 @@ export function Act4Horizon() {
           >
             <p className="text-lead text-gray-600">
               Two technologies will reshape insurance within 3 years.
-              Building capability now creates advantage later.
+              I&apos;ve been building in both.
+            </p>
+            <p className="text-gray-500 italic">
+              Not because I&apos;m a visionary. Because I got tired of waiting.
             </p>
           </motion.div>
 
@@ -140,7 +155,7 @@ export function Act4Horizon() {
               title="Web AI"
               tagline="AI that runs in the browser"
               points={[
-                "Privacy - data never leaves the device",
+                "Privacy - data never leaves the device. Compliance teams everywhere just exhaled.",
                 "Speed - no network latency",
                 "Cost - zero API calls",
               ]}
@@ -165,7 +180,7 @@ export function Act4Horizon() {
             viewport={{ once: true }}
           >
             <p className="text-body text-gray-500">
-              I&apos;ve been building in both spaces.
+              Building capability now creates advantage later.
             </p>
           </motion.div>
         </div>

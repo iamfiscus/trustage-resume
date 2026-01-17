@@ -22,11 +22,25 @@ function ClusterContent() {
     >
       {/* Step label */}
       <motion.p
-        className="text-gray-400 text-xs tracking-wide mb-8"
+        className="text-gray-400 text-xs tracking-wide mb-4"
         style={{ opacity: useTransform(scrollYProgress, [0, 0.05], [0, 1]) }}
       >
         step 3: <span className="text-gray-700 font-thin font-mono text-5xl underline">Cluster</span>
       </motion.p>
+
+      {/* Simple Math */}
+      <motion.div
+        className="mb-8"
+        style={{ opacity: useTransform(scrollYProgress, [0, 0.05], [0, 1]) }}
+      >
+        <p className="text-gray-400 font-mono text-3xl md:text-6xl font-thin tracking-[0.3em] md:tracking-[0.5em] uppercase w-full font-stretch-50%">
+          Simple...
+        </p>
+        <p className="text-right mt-2">
+          <span className="text-gray-400 text-xs md:text-sm italic">It&apos;s just </span>
+          <span className="text-gray-900 font-bold text-4xl md:text-6xl">Math.</span>
+        </p>
+      </motion.div>
 
       {/* Instruction */}
       <motion.div
@@ -57,6 +71,9 @@ function ClusterContent() {
         <p className="text-gray-600 mb-2">
           4 of 6 clusters map to something I&apos;ve already built and shipped.
         </p>
+        <p className="text-gray-500 text-sm italic text-right mb-2">
+          The other 2 are on my list.
+        </p>
         <p className="text-gray-900">
           Usually early to whatever&apos;s coming next.
         </p>
@@ -68,9 +85,9 @@ function ClusterContent() {
         style={{ opacity: useTransform(scrollYProgress, [0.75, 0.85], [0, 1]) }}
       >
         <p className="text-gray-600 text-xs">
-          <span className="text-gray-900">40 ideas</span> →
+          <span className="text-gray-900">42 ideas</span> →
           <span className="text-gray-900"> 6 clusters</span> →
-          Now evaluate and select.
+          Now the fun part: <span className="italic">killing your darlings.</span>
         </p>
       </motion.div>
     </motion.div>

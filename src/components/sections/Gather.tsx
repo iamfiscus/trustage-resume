@@ -15,6 +15,7 @@ function GatherRequirements() {
     { says: "Define enterprise R&D strategy", means: "Build a system, not a backlog" },
     { says: "Assess emerging technologies", means: "Separate signal from noise" },
     { says: "Balanced portfolio (H1/H2/H3)", means: "Know when to ship vs. explore" },
+    { says: "Cross-functional collaboration", means: "Sit in meetings where everyone nods but nothing ships" },
   ];
 
   const portfolioRows = [
@@ -39,11 +40,23 @@ function GatherRequirements() {
     >
       {/* Step label */}
       <motion.p
-        className="text-gray-400 text-xs tracking-wide mb-8"
+        className="text-gray-400 text-xs tracking-wide mb-2"
         style={{ opacity: useTransform(scrollYProgress, [0, 0.05], [0, 1]) }}
       >
         step 1: <span className="text-gray-700 font-thin font-mono text-5xl underline">Gather Requirements</span>
       </motion.p>
+      <motion.div
+        className="mb-8"
+        style={{ opacity: useTransform(scrollYProgress, [0, 0.05], [0, 1]) }}
+      >
+        <p className="text-gray-300 font-mono text-2xl md:text-4xl font-thin tracking-[0.2em] md:tracking-[0.4em] uppercase">
+          This should be
+        </p>
+        <p className="text-right">
+          <span className="text-gray-900 font-black text-3xl md:text-5xl tracking-tight">easier</span>
+          <span className="text-gray-400 text-sm md:text-lg italic ml-2">than it usually is.</span>
+        </p>
+      </motion.div>
 
       {/* Strategic Leadership */}
       <motion.div
@@ -141,6 +154,9 @@ function GatherRequirements() {
         <p className="text-gray-600">
           The role isn&apos;t doing research. It&apos;s <span className="text-gray-900 font-medium">building leverage</span>.
         </p>
+        <p className="text-gray-500 text-sm italic text-right mt-2">
+          Without losing the PhDs in the process.
+        </p>
       </motion.div>
 
       {/* Constraint */}
@@ -154,6 +170,9 @@ function GatherRequirements() {
         </p>
         <p className="text-gray-500 mt-2">
           Research needs to translate into business value while navigating governance.
+        </p>
+        <p className="text-gray-600 font-mono text-sm mt-4 bg-gray-50 p-3 rounded">
+          Translation: move fast, document everything, don&apos;t break anything that touches money.
         </p>
       </motion.div>
     </motion.div>

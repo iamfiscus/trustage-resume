@@ -7,12 +7,12 @@ import { useState, useEffect } from "react";
 const terminalLines = [
   { type: "prompt", text: "$ jd --capabilities" },
   { type: "blank", text: "" },
-  { type: "project", name: "n8n-nodes-mcp", stat: "4.8M downloads", note: "built in one sleepless night" },
+  { type: "project", name: "n8n-nodes-mcp", stat: "4.8M downloads", note: "4.8M people who didn't wait for their data team" },
   { type: "project", name: "mcp-d3-server", stat: "D3 via MCP", note: "data viz for agents" },
   { type: "project", name: "questionable", stat: "transformer.js", note: "AI runs in the browser" },
   { type: "project", name: "ai-labs @ rvo", stat: "built from 0", note: "research to roadmap" },
   { type: "blank", text: "" },
-  { type: "output", text: "Usually early to whatever's coming next." },
+  { type: "output", text: "Usually early to whatever's coming next. Sometimes annoyingly so." },
   { type: "blank", text: "" },
   { type: "cursor", text: "$ _" },
 ];
@@ -157,15 +157,16 @@ export function Act5Toolkit() {
           <Terminal />
 
           {/* Simple closing note */}
-          <motion.p
+          <motion.div
             className="text-center text-caption text-stone-400 mt-12"
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
             transition={{ delay: 2 }}
           >
-            This page was built with Claude Code.
-          </motion.p>
+            <p>This page was built with Claude Code.</p>
+            <p className="text-stone-500 italic mt-1">So was the insomnia that produced it.</p>
+          </motion.div>
         </div>
       </Section>
     </>

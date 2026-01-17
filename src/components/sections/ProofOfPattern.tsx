@@ -48,7 +48,7 @@ function ProofOfPatternContent() {
         style={{ opacity: useTransform(scrollYProgress, [0.4, 0.6], [0, 1]) }}
       >
         <p className="text-gray-900 text-lg mb-6">
-          Let&apos;s talk about which one matters most.
+          Let&apos;s talk. I promise not to use the word &apos;synergy.&apos;
         </p>
 
         <motion.button
@@ -71,7 +71,7 @@ function ProofOfPatternContent() {
         className="text-center text-xs text-gray-900 mt-16"
         style={{ opacity: useTransform(scrollYProgress, [0.7, 0.9], [0, 1]) }}
       >
-        JD Fiscus · Detroit
+        JD Fiscus · Detroit · Still debugging
       </motion.p>
     </motion.div>
   );

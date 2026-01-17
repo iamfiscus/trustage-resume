@@ -8,6 +8,7 @@ const keywords = [
   "Diverge",
   "Cluster",
   "Converge",
+  "Survive",
 ];
 
 export function Act1Paper() {
@@ -28,7 +29,7 @@ export function Act1Paper() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Accelerating TruStage&apos;s Technology Future
+            I skipped the pitch deck.
           </motion.h1>
 
           {/* Decorative line */}
@@ -51,6 +52,9 @@ export function Act1Paper() {
             <p className="text-caption text-gray-500">
               For Jeff Voorhees, VP Technology Innovation
             </p>
+            <p className="text-caption text-gray-400 italic mt-1">
+              who doesn&apos;t need another one
+            </p>
           </motion.div>
 
           {/* Divider */}
@@ -69,10 +73,12 @@ export function Act1Paper() {
           >
             <p className="section-marker mb-3">Abstract</p>
             <p className="text-body leading-relaxed text-gray-700">
-              This page shows how I would approach the Director of R&D role
-              at TruStage. Rather than list qualifications, I&apos;ll demonstrate
-              my thinking process: how I break down problems, generate approaches,
-              and converge on solutions.
+              You&apos;ve seen enough LinkedIn optimizers. This is how I actually think.
+              No slides. No buzzwords. Just the process and the receipts.
+            </p>
+            {/* <hr className="my-4 border-gray-200" /> */}
+            <p className="mt-4 text-body leading-relaxed text-gray-700 border-l-2 border-gray-200 pl-4">
+              <span className="text-gray-700 font-thin font-mono text-5xl font-stretch-50% tracking-tight">W</span><span className="text-gray-400 font-thin font-mono text-3xl font-stretch-150% tracking-wide italic">ay more interesting</span>.
             </p>
           </motion.div>
 
@@ -115,7 +121,7 @@ export function Act1Paper() {
               document.getElementById("challenge")?.scrollIntoView({ behavior: "smooth" });
             }}
           >
-            <span className="text-caption mb-2">Continue reading</span>
+            <span className="text-caption mb-2 font-mono">It gets weirder from here</span>
             <svg
               className="w-5 h-5"
               fill="none"

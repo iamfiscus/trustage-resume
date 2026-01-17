@@ -67,6 +67,9 @@ function TimelineCompression() {
           <span className="inline-block bg-blue-600 text-white text-h3 font-mono font-bold px-4 py-2 rounded">
             12x faster
           </span>
+          <p className="text-gray-600 text-sm mt-3">
+            The math isn&apos;t wrong. <span className="font-medium text-gray-900">The old process was.</span>
+          </p>
         </motion.div>
       </div>
     </motion.div>
@@ -78,6 +81,7 @@ function DiffView() {
     { type: "remove", text: "// wait 6 months for data team" },
     { type: "remove", text: "const report = await waitForDataTeam(request);" },
     { type: "remove", text: "// hope it's what you needed" },
+    { type: "narrator", text: "Narrator: it wasn't." },
     { type: "context", text: "" },
     { type: "add", text: "// self-service analytics" },
     { type: "add", text: "const report = await toolkit.analyze(data);" },
@@ -101,7 +105,8 @@ function DiffView() {
               key={i}
               className={`diff-line ${
                 line.type === "remove" ? "diff-remove" :
-                line.type === "add" ? "diff-add" : "diff-context"
+                line.type === "add" ? "diff-add" :
+                line.type === "narrator" ? "text-gray-500 italic text-xs pl-4 py-1" : "diff-context"
               }`}
               initial={{ opacity: 0, x: line.type === "remove" ? -10 : line.type === "add" ? 10 : 0 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -186,7 +191,7 @@ export function Act3Pillars() {
           {/* The three approaches */}
           <Approach
             title="Tech-as-a-Service"
-            description="Transform the data team from bottleneck to enabler."
+            description="Transform the data team from bottleneck to enabler. They'll thank you. Eventually."
             points={[
               "Service catalog with clear SLAs",
               "Intake process that respects business urgency",
@@ -206,7 +211,7 @@ export function Act3Pillars() {
 
           <Approach
             title="Rapid Prototyping"
-            description="PhD partnerships for fast exploration."
+            description="PhD partnerships for fast exploration. If it's not working by week 2, it's not going to work by month 6."
             points={[
               "Time-boxed experiments (2 weeks, not 6 months)",
               "Clear kill/scale criteria before starting",

@@ -76,18 +76,32 @@ function ConvergeContent() {
     >
       {/* Step label */}
       <motion.p
-        className="text-gray-400 text-xs tracking-wide mb-8"
+        className="text-gray-400 text-xs tracking-wide mb-4"
         style={{ opacity: useTransform(scrollYProgress, [0, 0.1], [0, 1]) }}
       >
         step 4: <span className="text-gray-700 font-thin font-mono text-5xl underline">Converge</span>
       </motion.p>
+
+      {/* Deadpan */}
+      <motion.div
+        className="mb-8 flex flex-col items-end"
+        style={{ opacity: useTransform(scrollYProgress, [0, 0.1], [0, 1]) }}
+      >
+        <p className="text-blue-400 text-xs md:text-sm uppercase tracking-[0.5em]" style={{ fontFamily: 'var(--font-mono)' }}>
+          now we get
+        </p>
+        <p className="text-gray-900 text-4xl md:text-6xl font-black uppercase -mt-1" style={{ fontFamily: 'var(--font-sans)' }}>
+          brutal.
+        </p>
+      </motion.div>
 
       {/* Evaluation criteria */}
       <motion.div
         className="mb-10"
         style={{ opacity: useTransform(scrollYProgress, [0.1, 0.2], [0, 1]) }}
       >
-        <p className="text-xs text-gray-400 tracking-wide mb-3">evaluation criteria</p>
+        <p className="text-xs text-gray-400 tracking-wide mb-1">evaluation criteria</p>
+        <p className="text-xs text-gray-500 italic mb-3">weighted by reality</p>
 
         {/* Mini criteria visualization */}
         <div className="mb-4">
@@ -148,6 +162,18 @@ function ConvergeContent() {
             </motion.div>
           ))}
         </div>
+
+        {/* Top selection callout */}
+        <motion.p
+          className="mt-6 text-sm text-stone-600 text-center"
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ delay: 0.5 }}
+        >
+          Enablement & Translation wins. Not because it&apos;s flashy.{" "}
+          <span className="text-stone-900 font-medium">Because it fixes the actual problem.</span>
+        </motion.p>
       </motion.div>
 
     </motion.div>
