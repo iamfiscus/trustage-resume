@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og";
 
 export const runtime = "edge";
 
-export const alt = "JD's Innovation Thesis - Accelerating TruStage's Technology Future";
+export const alt = "I skipped the pitch deck. Here's how I think instead.";
 export const size = {
   width: 1200,
   height: 630,
@@ -64,46 +64,51 @@ export default async function Image() {
         {/* Title */}
         <div
           style={{
-            fontSize: 64,
-            fontWeight: 600,
-            color: "#1a1a1a",
+            fontSize: 56,
+            fontWeight: 300,
+            color: "#9ca3af",
             fontFamily: "Georgia, serif",
-            marginBottom: 24,
+            marginBottom: 8,
           }}
         >
-          Accelerating TruStage's Technology Future
+          I skipped the pitch deck.
+        </div>
+        <div
+          style={{
+            fontSize: 72,
+            fontWeight: 800,
+            color: "#1a1a1a",
+            marginBottom: 32,
+            textTransform: "uppercase",
+            letterSpacing: "-0.02em",
+          }}
+        >
+          Here&apos;s how I think.
         </div>
 
         {/* Subtitle */}
         <div
           style={{
-            fontSize: 32,
-            color: "#4a5568",
-            marginBottom: 8,
-          }}
-        >
-          Let&apos;s Discover
-        </div>
-        <div
-          style={{
-            fontSize: 32,
-            color: "#4a5568",
+            fontSize: 24,
+            color: "#6b7280",
+            fontFamily: "monospace",
             marginBottom: 40,
           }}
         >
-          New Opportunities
+          An R&D methodology for TruStage
         </div>
 
         {/* Tagline */}
         <div
           style={{
             fontSize: 18,
-            color: "#718096",
-            letterSpacing: "0.1em",
+            color: "#9ca3af",
+            letterSpacing: "0.15em",
             fontFamily: "monospace",
+            textTransform: "uppercase",
           }}
         >
-          Director of Research & Development
+          JD Fiscus · Detroit
         </div>
 
         {/* Decorative circles */}
