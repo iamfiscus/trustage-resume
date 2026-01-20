@@ -9,9 +9,9 @@ import { useRef, useState } from "react";
 const QUICK_COMMANDS = [
   { label: "/about-jd", command: "/about-jd" },
   { label: "/r2r-workflow", command: "/r2r-workflow" },
+  { label: "/show-draft", command: "/show-draft" },
   { label: "/r2r-demo", command: "/r2r-demo" },
   { label: "/show-assessment", command: "/show-assessment" },
-  { label: "Why TruStage?", command: "/about-jd Why do you want to work at TruStage?" },
 ];
 
 function ProofOfPatternContent() {
