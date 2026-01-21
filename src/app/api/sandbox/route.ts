@@ -548,7 +548,36 @@ When triggered, display this sample draft output:
 
 ## /r2r:draft Output Example
 
-Here's what \`/r2r:draft "AI-powered code review"\` produces:
+### Usage
+
+\`\`\`bash
+# Basic usage
+/r2r:draft "AI-powered code review"
+
+# With research phase (searches for prior art)
+/r2r:draft "AI-powered code review" --research
+
+# Reference existing PRD
+/r2r:draft --prd @docs/prd.md
+
+# Specify template directly
+/r2r:draft "AI-powered code review" --template sourcegraph
+
+# Full form: PRD + research + template
+/r2r:draft "AI-powered code review" --research --prd @specs/prd.md --template google
+\`\`\`
+
+### Flags
+
+| Flag | Description |
+|------|-------------|
+| \`--research\` | Search for existing solutions, best practices, and prior art before drafting |
+| \`--prd @file\` | Reference an existing PRD/spec to extract context (also works as first positional: \`@prd.md\`) |
+| \`--template <name>\` | Skip template prompt. Options: \`google\`, \`uber\`, \`sourcegraph\`, \`experiment\` |
+
+---
+
+Here's what \`/r2r:draft "AI-powered code review" --research --template sourcegraph\` produces:
 
 ---
 
@@ -561,6 +590,22 @@ Here's what \`/r2r:draft "AI-powered code review"\` produces:
 ## Problem
 
 Manual code reviews are a bottleneck. Senior engineers spend 4-6 hours/week reviewing PRs. We want to explore whether AI can handle first-pass reviews.
+
+## Prior Art (from --research)
+
+### Existing Solutions
+- **CodeRabbit**: AI code review bot, $15/user/mo, GitHub native
+- **Codacy**: Quality + security scanning, established player
+- **Amazon CodeGuru**: AWS-native, ML-powered, pay-per-line
+- **Sourcery**: Python-focused, real-time suggestions
+
+### Relevant Patterns
+- Most tools focus on style/security, not logic review
+- Hybrid approach (AI first-pass + human review) is emerging standard
+
+### Lessons from the Field
+- False positive fatigue is the #1 adoption killer
+- Inline comments > PR summaries for developer adoption
 
 ## Research Questions
 
