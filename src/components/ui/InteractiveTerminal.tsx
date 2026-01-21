@@ -132,13 +132,6 @@ export const InteractiveTerminal = forwardRef<TerminalHandle, InteractiveTermina
       }
     }, [connectionState]);
 
-    // Focus password input when disconnected
-    useEffect(() => {
-      if (connectionState === "disconnected" && passwordInputRef.current) {
-        passwordInputRef.current.focus();
-      }
-    }, [connectionState]);
-
     const addLine = useCallback((type: TerminalLine["type"], content: string, errorType?: ErrorType, recoverable?: boolean) => {
       setLines((prev) => [...prev, { type, content, timestamp: new Date(), errorType, recoverable }]);
     }, []);
